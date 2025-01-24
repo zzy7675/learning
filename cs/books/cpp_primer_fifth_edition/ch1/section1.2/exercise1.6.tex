@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{environ} % 用于定义新环境
+
+% 定义代码显示的样式
+\lstdefinestyle{mystyle}{
+    xleftmargin=2em,
+    backgroundcolor=\color{white},    % 代码背景色
+    commentstyle=\itshape\color{gray},% 注释的样式
+    keywordstyle=\bfseries\color{blue},% 关键字的样式
+    breakatwhitespace=false,           % 不在空格处换行
+    breaklines=true,                 % 自动换行
+    captionpos=b,                    % 标题位置：底部
+    keepspaces=true,                 % 保持空格
+    numbers=left,                    % 在左侧显示行号
+    numbersep=14pt,                   % 行号与代码之间的距离
+    showspaces=false,                % 不显示空格
+    showstringspaces=false,          % 不显示字符串中的空格
+    showtabs=false,                  % 不显示制表符
+    tabsize=4                        % 制表符等于两个空格
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+
+\section*{Exercise 1.6}
+
+\begin{lstlisting}[language=C++]
+std::cout << "The sum of " << v1;
+<< " and " << v2;
+<< " is " << v1 + v2 << std::endl;
+\end{lstlisting}
+
+\begin{flushleft}
+Line 2 and Line 3 do not have a left operand on the left of the first \lstinline[language=C++]{<<} operator. In order to fix it,
+we can put \lstinline[language=C++]{std::cout} operand at the start of Line 2 and Line 3 as follows:
+\end{flushleft}
+
+\begin{lstlisting}[language=C++]
+std::cout << "The sum of " << v1;
+std::cout << " and " << v2;
+std::cout << " is " << v1 + v2 << std::endl;
+\end{lstlisting}
+
+\end{document}
+
