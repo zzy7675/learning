@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{environ} % 用于定义新环境
+
+% 定义代码显示的样式
+\lstdefinestyle{mystyle}{
+    xleftmargin=2em,
+    backgroundcolor=\color{white},    % 代码背景色
+    commentstyle=\itshape\color{gray},% 注释的样式
+    keywordstyle=\bfseries\color{blue},% 关键字的样式
+    breakatwhitespace=false,           % 不在空格处换行
+    breaklines=true,                 % 自动换行
+    captionpos=b,                    % 标题位置：底部
+    keepspaces=true,                 % 保持空格
+    numbers=left,                    % 在左侧显示行号
+    numbersep=14pt,                   % 行号与代码之间的距离
+    showspaces=false,                % 不显示空格
+    showstringspaces=false,          % 不显示字符串中的空格
+    showtabs=false,                  % 不显示制表符
+    tabsize=4                        % 制表符等于两个空格
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+
+\section*{Exercise 1.8}
+
+\begin{lstlisting}[language=C++]
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "/" /;
+std::cout << /* "" "/*" */;
+\end{lstlisting}
+
+\begin{flushleft}
+Line 1 is legal. It will print out '/*' in the terminal.
+Line 2 is legal. It will print out '*/' in the terminal.
+Line 3 is illegal. It will cause compile error. We need to get rid
+of the extra '/*' and '/'.
+Line 4 is illegal. It does not have a right operand. There are many
+ways to fix it. What I would do is adding a pair of quote right next
+to the \lstinline[language=C++]|<<| operator. The modified version of
+the statements mentioned above is:
+\end{flushleft}
+
+\begin{lstlisting}[language=C++]
+std::cout << "/*";
+std::cout << "*/";
+std::cout << "/";
+std::cout << "" /* "" "/*" */;
+\end{lstlisting}
+
+\end{document}
