@@ -14,6 +14,7 @@ int main()
                 std::cout << " is different from current ISBN ";
                 std::cout << total.isbn();
                 std::cout << std::endl;
+                return -1; // ISBN unequal, return right away
             }
         }
         std::cout << "ISBN, total books, total sales, and average price are ";
@@ -21,6 +22,7 @@ int main()
         std::cout << std::endl;
     } else {
         std::cout << "No Transactions" << std::endl;
+        return -1;
     }
     return 0;
 }
