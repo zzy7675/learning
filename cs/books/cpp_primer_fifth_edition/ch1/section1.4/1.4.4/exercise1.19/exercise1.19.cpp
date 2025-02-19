@@ -7,7 +7,7 @@
 */
 int main()
 {
-    int val1 = 0, val2 = 0, tmp = 0;
+    int val1 = 0, val2 = 0;
     std::cout << "Enter 2 integers:";
     std::cout << std::endl;
 

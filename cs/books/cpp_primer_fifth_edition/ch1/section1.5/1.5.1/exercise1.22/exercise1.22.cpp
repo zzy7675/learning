@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Sales_item.h"
 
+/*
+* Program that reads several transactions with same ISBN.
+* Corresponding input file is exercise1.22.txt.
+*/
 int main()
 {
     Sales_item total, item;

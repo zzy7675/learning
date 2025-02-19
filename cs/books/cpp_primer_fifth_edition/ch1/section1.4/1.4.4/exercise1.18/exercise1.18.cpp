@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-* a copy of the section1.4.4.cpp
+* a copy of the exercise1.17.cpp
 */
 int main() 
 { 
