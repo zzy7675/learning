@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+    
+\section*{Exercise2.14}
+
+\begin{lstlisting}[numbers=left, basicstyle=\ttfamily, xleftmargin=2em]
+int i = 100, sum = 0;
+for (int i = 0; i != 10; ++i)
+sum += i;
+std::cout << i << " " << sum << std::endl;
+\end{lstlisting}
+
+\begin{flushleft}
+values printed: \lstinline[language=C++]|100 45| \linebreak
+i is redefined in \lstinline[language=C++]|for| loop, so sum ends up with the sum of 0 to 9, which is 45. At the start of line 4, the i in the \lstinline[language=C++]|for| loop becomes invalid, and we get back to outer scope. Therefore, the program prints out outer scope i 100.
+\end{flushleft}
+
+\end{document}
