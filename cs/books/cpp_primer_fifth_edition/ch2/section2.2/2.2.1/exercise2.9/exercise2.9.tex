@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{document}
+
+\section*{Exercise2.9}
+
+\begin{enumerate}[label=(\alph*)]
+    \item \lstinline[language=C++]|std::cin >> int input_value;|
+    \item \lstinline[language=C++]|int i = { 3.14 };|
+    \item \lstinline[language=C++]|double salary = wage = 9999.99;|
+    \item \lstinline[language=C++]|int i = 3.14;|
+\end{enumerate}
+
+\begin{flushleft}
+(a) is illegal. Variable declaration should be executed before input. \\
+(b) raises warning, losing precision. \\
+(c) is illegal. Multiple variable declaration should be seperated by colon before assignment.\\
+(d) raises warning, losing precision.
+\end{flushleft}
+
+\begin{flushleft}
+(a) should change to:
+\end{flushleft}
+
+\begin{lstlisting}[language=C++, basicstyle=\ttfamily, numbers=left, xleftmargin=2em]
+int input_value;
+std::cin >> value;
+\end{lstlisting}
+
+\begin{flushleft}
+(c) should change to:
+\end{flushleft}
+
+\begin{lstlisting}[language=C++, basicstyle=\ttfamily, numbers=left, xleftmargin=2em]
+double salary, wage;
+salary = wage = 9999.99;
+\end{lstlisting}
+
+\end{document}
