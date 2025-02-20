@@ -32,6 +32,7 @@ add_executable(exercise1.21 ch1/section1.5/1.5.1/exercise1.21/exercise1.21.cpp)
 add_executable(exercise1.22 ch1/section1.5/1.5.1/exercise1.22/exercise1.22.cpp)
 add_executable(exercise1.23 ch1/section1.5/1.5.2/exercise1.23/exercise1.23.cpp)
 add_executable(exercise1.25 ch1/section1.6/exercise1.25/exercise1.25.cpp)
+add_executable(exercise2.4 ch2/section2.1/2.1.2/exercise2.4/exercise2.4.cpp)
 
 target_include_directories(exercise1.20 PUBLIC ${CMAKE_SOURCE_DIR}/include)
 target_include_directories(exercise1.21 PUBLIC ${CMAKE_SOURCE_DIR}/include)
