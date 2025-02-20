@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{tabularx}   % 扩展表格宽度自适应
+\usepackage{ragged2e}   % 改善对齐控制
+\usepackage{booktabs}   % 专业表格线
+
+\begin{document}
+
+\section*{Exercise 2.5}
+
+\begin{table}[htbp]
+\centering
+\caption{C++ Literal Type Analysis}
+\label{tab:literals}
+\begin{tabularx}{\textwidth}{@{}>{\ttfamily}l l l >{\RaggedRight}X@{}}
+\toprule
+\textnormal{Label} & \textnormal{Literal} & \textnormal{Type} & \textnormal{Description} \\
+\midrule
+(a) & 'a'      & char        & char literal(single quote) \\
+    & L'a'     & wchar\_t    & wide char literal(L prefix + single quote) \\
+    & "a"      & const char[] & string literal(double quote) \\
+    & L"a"     & const wchar\_t[] & wide string literal(double quote + L prefix) \\
+\midrule
+(b) & 10       & int         & decimal integer literal \\
+    & 10u      & unsigned int & unsigned decimal integer literal(u suffix) \\
+    & 10L      & long        & long decimal integer literal(L suffix) \\
+    & 10uL     & unsigned long & unsigned long decimal integer literal(u+L suffix) \\
+    & 012      & int         & octal integer literal(0 prefix) \\
+    & 0xC      & int         & hexadecimal integer literal(0x prefix) \\
+\midrule
+(c) & 3.14     & double      & double precision floating point literal \\
+    & 3.14f    & float       & single precision floating point literal(f suffix) \\
+    & 3.14L    & long double & long double precision floating point literal(L suffix) \\
+\midrule
+(d) & 10       & int         & decimal integer literal(default) \\
+    & 10u      & unsigned int & unsigned decimal integer literal(u suffix) \\
+    & 10.      & double      & double precision floating point literal(default) \\
+    & 10e-2    & double      & double precision floating point literal($10 * 10^{2} = 0.1$) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}
