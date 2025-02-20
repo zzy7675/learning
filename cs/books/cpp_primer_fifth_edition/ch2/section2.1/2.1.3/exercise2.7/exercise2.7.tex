@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{tabularx}   % 扩展表格宽度自适应
+\usepackage{ragged2e}   % 改善对齐控制
+\usepackage{booktabs}   % 专业表格线
+
+\begin{document}
+
+\section*{Exercise2.7}
+
+\begin{table}[htbp]
+\centering
+\caption{C++ Literal Value and Type Analysis}
+\label{tab:literals}
+\begin{tabularx}{\textwidth}{@{}>{\ttfamily}l >{\RaggedRight}X@{} >{\RaggedRight}X@{} >{\RaggedRight}X@{}}
+\toprule
+\textnormal{Label} & \textnormal{Literal} & \textnormal{Value} & \textnormal{Type} \\
+\midrule
+(a) & "Who goes with F\textbackslash145rgus?\textbackslash012"    & Who goes with Fergus?(line change) & const char[] \\
+\midrule
+(b) & 3.14e1L                             & $3.14*10^{1}=31.4$    & long double \\
+\midrule
+(c) & 1024f                               & 1024.0                & float \\
+\midrule
+(d) & 3.14L                               & 3.14                  & long double \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}
