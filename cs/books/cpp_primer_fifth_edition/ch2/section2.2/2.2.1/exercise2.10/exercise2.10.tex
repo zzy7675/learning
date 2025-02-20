@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{document}
+
+\section*{Exercise 2.10}
+
+\begin{lstlisting}[numbers=left, basicstyle=\ttfamily, language=C++, xleftmargin=2em]
+std::string global_str; 
+int global_int; 
+int main() 
+{ 
+    int local_int; 
+    std::string local_str; 
+}
+\end{lstlisting}
+
+\begin{flushleft}
+\lstinline[language=C++]|global_str| is empty string. \\
+\lstinline[language=C++]|global_int| is 0. \\
+\lstinline[language=C++]|local_int| is uninitialized. \\
+\lstinline[language=C++]|local_str| is initialized by \lstinline[language=C++]|string| class. Thus,
+it is initialized to empty string. \linebreak
+
+\section*{Summary}
+
+\lstinline[language=C++]|int| a is built-in type, so there is a difference in initial value when we define it outside and inside a function respectively. \linebreak
+
+\lstinline[language=C++]|string|, however, is actually a class defined in std. Therefore, its initialization depends on its class.
+\end{flushleft}
+
+\end{document}
