@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+    
+\section*{Exercise2.13}
+
+\begin{lstlisting}[numbers=left, basicstyle=\ttfamily, xleftmargin=2em]
+int i = 42;
+int main()
+{
+    int i = 100;
+    int j = i;
+}
+\end{lstlisting}
+
+\begin{flushleft}
+value of \lstinline[language=C++]|j| is 100. Definition of \lstinline[language=C++]|i| in \lstinline[language=C++]|main()| overrides the definition outside it. Therefore, the true initial value to j is the value of \lstinline[language=C++]|i| defined inside function \lstinline[language=C++]|main()|.
+\end{flushleft}
+
+\end{document}
