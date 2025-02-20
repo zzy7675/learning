@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily,
+    xleftmargin=2em,
+    language=C++,
+    backgroundcolor=\color{white},      % 代码背景色
+    keywordstyle=\color{blue}, % 关键字的样式
+    breakatwhitespace=false,            % 不在空格处换行
+    breaklines=true,                    % 自动换行
+    captionpos=b,                       % 标题位置：底部
+    keepspaces=true,                    % 保持空格
+    numbers=left,                       % 在左侧显示行号
+    numbersep=10pt,                     % 行号与代码之间的距离
+    showspaces=false,                   % 不显示空格
+    showstringspaces=false,             % 不显示字符串中的空格
+    showtabs=false,                     % 不显示制表符
+    tabsize=4                           % 制表符等于两个空格
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+
+\section*{Exercise 2.3}
+
+\begin{lstlisting}
+unsigned u = 10, u2 = 42;
+std::cout << u2 - u << std::endl; 
+std::cout << u - u2 << std::endl; 
+    
+int i = 10, i2 = 42; 
+std::cout << i2 - i << std::endl; 
+std::cout << i - i2 << std::endl; 
+    
+std::cout << i - u << std::endl; 
+std::cout << u - i << std::endl;
+\end{lstlisting}
+
+\begin{flushleft}
+Line 2 prints out 32;                                       \\
+Line 3 prints out 4294967264 due to wrap-around(overflow);  \\
+Line 6 prints out 32;                                       \\
+Line 7 prints out -32;                                      \\
+Line 9 prints out 0;                                        \\
+Line 10 prints out 0;
+\end{flushleft}
+
+
+
+\end{document}
