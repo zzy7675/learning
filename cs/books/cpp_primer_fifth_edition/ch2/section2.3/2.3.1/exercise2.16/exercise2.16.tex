@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\begin{document}
+    
+\section*{Exercise 2.16}
+
+\begin{lstlisting}[language=C++, numbers=left, xleftmargin=2em, basicstyle=\ttfamily]
+int i = 0, &r1 = i; double d = 0, &r2 = d;    
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item \lstinline[language=C++]|r2 = 3.14159;|
+\item \lstinline[language=C++]|r2 = r1;|
+\item \lstinline[language=C++]|i = r2;|
+\item \lstinline[language=C++]|r1 = d;|
+\end{enumerate}
+
+\begin{flushleft}
+(a) is valid. 3.14159 is assigned to d.\\
+(b) is valid. value of i is assigned to d.\\
+(c) is valid. value of d is assigned to i. \\
+(d) is valid. value of d is assigned to i. \\
+\end{flushleft}
+
+\end{document}
