@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Exercise 2.15}
+
+\begin{enumerate}[label=(\alph*)]
+\item \lstinline[language=C++]|int ival = 1.01;|
+\item \lstinline[language=C++]|int &rval1 = 1.01;|
+\item \lstinline[language=C++]|int &rval2 = ival;|
+\item \lstinline[language=C++]|int &rval3;|
+\end{enumerate}
+
+\begin{flushleft}
+(a) is valid, although it loses precision. \\
+(b) is invalid. Reference cannot be bound to a literal. \\
+(c) is valid. \\
+(d) is invalid. Reference must be initialized.
+\end{flushleft}
+
+\end{document}
