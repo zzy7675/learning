@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Exercise 2.21}
+
+\begin{lstlisting}[basicstyle=\ttfamily, numbers=left, xleftmargin=2em]
+int i = 0;
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+    \item \lstinline[language=C++]|double *dp = &i;|
+    \item \lstinline[language=C++]|int *ip = i;|
+    \item \lstinline[language=C++]|int *p = &i;|
+\end{enumerate}
+
+\begin{flushleft}
+(a) is illegal. Pointer's type does not match object's type.\\
+(b) is illegal. Cannot assign i to pointer directly. Need to dereference i first and assign the address of i to pointer ip.\\
+(c) is legal.
+\end{flushleft}
+
+\end{document}
