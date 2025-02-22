@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Exercise 2.22}
+
+\begin{lstlisting}[basicstyle=\ttfamily, numbers=left, xleftmargin=2em]
+if (p) // ...
+if (*p) // ...
+\end{lstlisting}
+
+\begin{flushleft}
+The condition for \lstinline[language=C++]|if| statement in Line 1 is to determine if pointer p itself is a true address.\\
+The condition for \lstinline[language=C++]|if| statement in Line 2 is to determine if the value pointer p points is not 0.
+\end{flushleft}
+
+\end{document}
