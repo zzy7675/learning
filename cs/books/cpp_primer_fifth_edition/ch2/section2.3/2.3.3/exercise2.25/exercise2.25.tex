@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\begin{document}
+
+\section*{Exercise 2.25}
+
+\begin{enumerate}[label=(\alph*)]
+    \item \lstinline[language=C++]|int *ip, i, &r = i;|
+    \item \lstinline[language=C++]|int i, *ip = 0;|
+    \item \lstinline[language=C++]|int *ip, ip2;|
+\end{enumerate}
+
+\begin{flushleft}
+(a) ip is a pointer; i is an integer; r is a reference that bounds to i. ip is undefined; i is undefined, r is undefined.\\
+(b) i is an integer; ip is a pointer; i is undefined; ip is null.\\
+(c) ip is a pointer undefined; ip2 is an integer undefined.
+\end{flushleft}
+
+\end{document}
