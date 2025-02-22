@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+
+\section*{Exercise 2.24}
+
+\begin{lstlisting}[language=C++, numbers=left, xleftmargin=2em, basicstyle=\ttfamily]
+int i = 42; void p = &i; long lp = &i;
+\end{lstlisting}
+
+\begin{flushleft}
+\lstinline[language=C++]|void| is a special pointer type. It can point to any type of object. lp is a long integer pointer type, but \lstinline[language=C++]|i| is an integer type. Type of \lstinline[language=C++]|lp| and type of \lstinline[language=C++]|i| do not match.
+\end{flushleft}
+
+\end{document}
