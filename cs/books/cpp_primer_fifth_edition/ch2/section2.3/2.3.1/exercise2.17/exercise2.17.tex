@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\begin{document}
+    
+\section*{Exercise 2.17}
+
+\begin{lstlisting}[language=C++, numbers=left, xleftmargin=2em, basicstyle=\ttfamily, showstringspaces=false]
+int i, &ri = i;
+i = 5; ri = 10;
+std::cout << i << " " << ri << std::endl;
+\end{lstlisting}
+
+\begin{flushleft}
+prints out: 10 10
+\end{flushleft}
+
+\end{document}
